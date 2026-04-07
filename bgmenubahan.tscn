@@ -1,0 +1,193 @@
+[gd_scene format=3 uid="uid://igcekkuqj0eu"]
+
+[ext_resource type="Script" uid="uid://coh4sjbu0qmnr" path="res://bgmenubahan.gd" id="1_ssw4i"]
+[ext_resource type="FontFile" uid="uid://bjx1gual0icec" path="res://fontbgpilbahan.ttf" id="2_d8ktv"]
+[ext_resource type="Texture2D" uid="uid://bveleeis0pa8o" path="res://Si Koki Cookies (1).png" id="2_g2ji0"]
+[ext_resource type="Texture2D" uid="uid://b7f48pqxs2eie" path="res://back pil.png" id="3_s3014"]
+[ext_resource type="Texture2D" uid="uid://bn1te6w366fax" path="res://icons/bahan1.png" id="10_pblh3"]
+[ext_resource type="Texture2D" uid="uid://i3ork3eodobj" path="res://cok_pressed.png" id="11_ssw4i"]
+[ext_resource type="Texture2D" uid="uid://4gfupl1gek3" path="res://icons/bahan2.png" id="15_g2ji0"]
+[ext_resource type="Texture2D" uid="uid://3j4hiwsdlaw4" path="res://butterpressed.png" id="16_3q30t"]
+[ext_resource type="Texture2D" uid="uid://c6qvxorqaqv5k" path="res://alat alat.png" id="17_3q30t"]
+[ext_resource type="Texture2D" uid="uid://d3ugsnd6t0h2a" path="res://icons/bahan3.png" id="17_xdwus"]
+[ext_resource type="Texture2D" uid="uid://btdoisi882yj5" path="res://tallog.png" id="18_7ld58"]
+[ext_resource type="Texture2D" uid="uid://bdy077b4vo36i" path="res://7_pressed.png" id="18_q5mku"]
+[ext_resource type="Texture2D" uid="uid://uvbgw877l3ds" path="res://icons/bahan4.png" id="19_jo2y5"]
+[ext_resource type="Texture2D" uid="uid://kgdogaopecx8" path="res://8_pressed.png" id="20_0aqea"]
+[ext_resource type="Texture2D" uid="uid://danx8lhg2soqn" path="res://icons/bahan6.png" id="21_jo2y5"]
+[ext_resource type="Texture2D" uid="uid://bq0547gip6tir" path="res://icons/bahan5.png" id="21_pj6yo"]
+[ext_resource type="Texture2D" uid="uid://csrgk1rjwhvyw" path="res://9_pressed.png" id="22_0aqea"]
+[ext_resource type="Texture2D" uid="uid://cjq4gtqv5y6fo" path="res://10_pressed.png" id="22_pqxhe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ifkx"]
+texture = ExtResource("2_g2ji0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xktg4"]
+texture = ExtResource("3_s3014")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssw4i"]
+bg_color = Color(0.90939, 0.90939, 0.90939, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pblh3"]
+bg_color = Color(0.545098, 0.388235, 0.243137, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.317647, 0.184314, 0.0745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ssw4i")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="bgmenupil" type="Panel" parent="CanvasLayer/UI"]
+z_index = -2
+layout_mode = 0
+offset_right = 1153.0
+offset_bottom = 651.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7ifkx")
+
+[node name="fontpil" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 105.0
+offset_right = 682.0
+offset_bottom = 222.0
+theme_override_fonts/font = ExtResource("2_d8ktv")
+theme_override_font_sizes/font_size = 23
+text = "Lets make some Croissant"
+
+[node name="backpil" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 105.0
+offset_right = 165.0
+offset_bottom = 205.0
+mouse_filter = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_xktg4")
+
+[node name="Lbl_bahan1" type="TextureButton" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 331.0
+offset_top = 426.0
+offset_right = 518.0
+offset_bottom = 646.0
+scale = Vector2(0.667241, 0.498543)
+toggle_mode = true
+texture_normal = ExtResource("10_pblh3")
+texture_pressed = ExtResource("11_ssw4i")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_bahan2" type="TextureButton" parent="CanvasLayer/UI"]
+z_index = 4
+layout_mode = 0
+offset_left = 881.0
+offset_top = 360.0
+offset_right = 1068.0
+offset_bottom = 545.0
+scale = Vector2(0.647024, 0.638947)
+toggle_mode = true
+texture_normal = ExtResource("15_g2ji0")
+texture_pressed = ExtResource("16_3q30t")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_bahan3" type="TextureButton" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 711.0
+offset_top = 358.0
+offset_right = 873.0
+offset_bottom = 576.0
+scale = Vector2(0.511931, 0.611775)
+toggle_mode = true
+texture_normal = ExtResource("17_xdwus")
+texture_pressed = ExtResource("18_q5mku")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_bahan4" type="TextureButton" parent="CanvasLayer/UI"]
+z_index = 5
+layout_mode = 0
+offset_left = 1030.0
+offset_top = 362.0
+offset_right = 1217.0
+offset_bottom = 582.0
+scale = Vector2(0.567892, 0.688632)
+toggle_mode = true
+texture_normal = ExtResource("19_jo2y5")
+texture_pressed = ExtResource("20_0aqea")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_bahan5" type="TextureButton" parent="CanvasLayer/UI"]
+z_index = -1
+layout_mode = 0
+offset_left = 549.0
+offset_top = 229.0
+offset_right = 736.0
+offset_bottom = 449.0
+scale = Vector2(0.671202, 0.656819)
+toggle_mode = true
+texture_normal = ExtResource("21_jo2y5")
+texture_pressed = ExtResource("22_0aqea")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_bahan6" type="TextureButton" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 559.0
+offset_top = 412.0
+offset_right = 746.0
+offset_bottom = 632.0
+scale = Vector2(0.371569, 0.357905)
+toggle_mode = true
+texture_normal = ExtResource("21_pj6yo")
+texture_pressed = ExtResource("22_pqxhe")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Lbl_talenan" type="TextureButton" parent="CanvasLayer/UI"]
+offset_left = 638.0
+offset_top = 106.0
+offset_right = 825.0
+offset_bottom = 326.0
+scale = Vector2(0.864772, 0.644462)
+toggle_mode = true
+texture_normal = ExtResource("17_3q30t")
+texture_pressed = ExtResource("18_7ld58")
+ignore_texture_size = true
+stretch_mode = 3
+
+[node name="Button" type="Button" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 525.0
+offset_right = 709.0
+offset_bottom = 601.0
+theme_override_fonts/font = ExtResource("2_d8ktv")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ssw4i")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pblh3")
+text = "cook "
+
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan1" to="." method="_on_lbl_bahan_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan2" to="." method="_on_lbl_bahan_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan3" to="." method="_on_lbl_bahan_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan4" to="." method="_on_lbl_bahan_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan5" to="." method="_on_lbl_bahan_5_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_bahan6" to="." method="_on_lbl_bahan_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Lbl_talenan" to="." method="_on_lbl_bahan_6_pressed"]
+[connection signal="pressed" from="CanvasLayer/UI/Button" to="." method="_on_button_pressed"]

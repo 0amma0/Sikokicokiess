@@ -1,0 +1,110 @@
+[gd_scene format=3 uid="uid://fbymrxteq41k"]
+
+[ext_resource type="Texture2D" uid="uid://bhsbe7bkesdde" path="res://menu pilih.PNG" id="1_a8i6j"]
+[ext_resource type="Script" uid="uid://dh5txx478di23" path="res://bgalat.gd" id="1_ipofe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ipofe"]
+texture = ExtResource("1_a8i6j")
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ipofe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 104.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_ipofe")
+
+[node name="Lbl_bahan1" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 1
+offset_right = 139.0
+offset_bottom = 87.0
+
+[node name="Lbl_bahan2" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 1
+offset_left = 631.0
+offset_top = 262.0
+offset_right = 802.0
+offset_bottom = 369.0
+
+[node name="Lbl_bahan3" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 1
+offset_left = 543.0
+offset_top = 321.0
+offset_right = 672.0
+offset_bottom = 401.0
+
+[node name="Lbl_bahan4" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 1
+offset_left = 547.0
+offset_top = 262.0
+offset_right = 832.0
+offset_bottom = 514.0
+
+[node name="Lbl_bahan5" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 524.0
+offset_right = 1379.0
+offset_bottom = 776.0
+
+[node name="Lbl_bahan6" type="TextureRect" parent="CanvasLayer/UI"]
+z_index = 4
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 0
+offset_left = 779.0
+offset_top = 273.0
+offset_right = 1064.0
+offset_bottom = 525.0
+
+[node name="Lbl_bahan7" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 0
+offset_left = 631.0
+offset_top = 262.0
+offset_right = 802.0
+offset_bottom = 369.0
+
+[node name="Lbl_bahan8" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 0
+offset_left = 543.0
+offset_top = 321.0
+offset_right = 672.0
+offset_bottom = 401.0
+
+[node name="Lbl_bahan9" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 0
+offset_left = 547.0
+offset_top = 262.0
+offset_right = 832.0
+offset_bottom = 514.0
+
+[node name="Lbl_bahan10" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 140)
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 524.0
+offset_right = 1379.0
+offset_bottom = 776.0
+
+[node name="Lbl_talenan" type="TextureRect" parent="CanvasLayer/UI"]
+custom_minimum_size = Vector2(0, 140)
+offset_left = 1094.0
+offset_top = 524.0
+offset_right = 1379.0
+offset_bottom = 776.0

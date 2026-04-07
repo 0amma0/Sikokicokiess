@@ -1,0 +1,121 @@
+[gd_scene format=3 uid="uid://dv8clksolbavh"]
+
+[ext_resource type="Texture2D" uid="uid://cdbkn2liju0g8" path="res://Si Koki Cookies (22).png" id="1_d83av"]
+[ext_resource type="FontFile" uid="uid://bjx1gual0icec" path="res://fontbgpilbahan.ttf" id="2_fpdlm"]
+[ext_resource type="Script" uid="uid://4krha3e1oc6f" path="res://mangkok_adonan.gd" id="4_mlasa"]
+[ext_resource type="Texture2D" uid="uid://b2gkvjmw2g0a3" path="res://icons/adonan_jadi.png" id="4_yhxkn"]
+[ext_resource type="AudioStream" uid="uid://bjtkb7kgimwcm" path="res://Sounds/FinishSound.mp3" id="6_ekjxf"]
+[ext_resource type="Script" uid="uid://kvkgyxf7rg4y" path="res://loyang.gd" id="6_q5d7k"]
+[ext_resource type="Texture2D" uid="uid://cfn68juv3ybjy" path="res://bgorang.png" id="7_d83av"]
+[ext_resource type="Script" uid="uid://bs8lj0b0rep4k" path="res://kroisan_template.gd" id="8_ekjxf"]
+[ext_resource type="Script" uid="uid://ccu0lpu5tihif" path="res://next_button_3.gd" id="8_q5d7k"]
+[ext_resource type="Texture2D" uid="uid://drj68fk3ije1a" path="res://icons/jadi.png" id="10_b6c37"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q5d7k"]
+texture = ExtResource("1_d83av")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhxkn"]
+bg_color = Color(0.90939, 0.90939, 0.90939, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q5d7k"]
+bg_color = Color(0.545098, 0.388235, 0.243137, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.317647, 0.184314, 0.0745098, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Node2D" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UI" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 649.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_q5d7k")
+
+[node name="fontpil" type="Label" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 130.0
+offset_top = 57.0
+offset_right = 621.0
+offset_bottom = 174.0
+theme_override_fonts/font = ExtResource("2_fpdlm")
+theme_override_font_sizes/font_size = 30
+text = "STEP 3
+"
+
+[node name="MangkokAdonan" type="TextureButton" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 195.0
+offset_right = 520.0
+offset_bottom = 444.0
+scale = Vector2(1.04742, 1.0439)
+texture_normal = ExtResource("4_yhxkn")
+ignore_texture_size = true
+stretch_mode = 3
+script = ExtResource("4_mlasa")
+
+[node name="Loyang" type="TextureRect" parent="CanvasLayer/UI"]
+layout_mode = 0
+offset_left = 689.0
+offset_top = 193.0
+offset_right = 976.0
+offset_bottom = 439.0
+scale = Vector2(1.07682, 0.994789)
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("6_q5d7k")
+next_button_path = NodePath("Next_Button3")
+
+[node name="FinishSound" type="AudioStreamPlayer" parent="CanvasLayer/UI/Loyang"]
+stream = ExtResource("6_ekjxf")
+
+[node name="Bgorang" type="Sprite2D" parent="CanvasLayer/UI/Loyang"]
+visible = false
+z_index = 5
+position = Vector2(-398.395, 201.048)
+scale = Vector2(0.898045, 0.844983)
+texture = ExtResource("7_d83av")
+
+[node name="Next_Button3" type="Button" parent="CanvasLayer/UI/Loyang"]
+visible = false
+layout_mode = 0
+offset_left = -226.593
+offset_top = 335.75
+offset_right = 43.4069
+offset_bottom = 427.75
+theme_override_fonts/font = ExtResource("2_fpdlm")
+theme_override_font_sizes/font_size = 41
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yhxkn")
+theme_override_styles/normal = SubResource("StyleBoxFlat_q5d7k")
+text = "NEXT
+"
+script = ExtResource("8_q5d7k")
+
+[node name="KroisanTemplate" type="TextureRect" parent="CanvasLayer/UI"]
+visible = false
+layout_mode = 0
+offset_left = 744.0
+offset_top = 164.0
+offset_right = 1009.0
+offset_bottom = 394.0
+scale = Vector2(1.17731, 1.23452)
+texture = ExtResource("10_b6c37")
+expand_mode = 1
+stretch_mode = 3
+script = ExtResource("8_ekjxf")
+
+[connection signal="pressed" from="CanvasLayer/UI/Loyang/Next_Button3" to="CanvasLayer/UI/Loyang/Next_Button3" method="_on_pressed"]
