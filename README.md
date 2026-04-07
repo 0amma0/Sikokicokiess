@@ -1,0 +1,2 @@
+Si Koki Cookies merupakan game edukasi 2D bertema memasak yang ditujukan untuk anak usia 6–15 tahun. Dalam permainan ini pemain memilih resep, mengikuti langkah memasak, serta menyelesaikan setiap tahap secara berurutan hingga menghasilkan makanan yang sesuai.
+Game ini dirancang agar pemain dapat belajar memahami urutan proses, meningkatkan kemampuan berpikir runtut, serta mengambil keputusan sederhana melalui pengalaman bermain yang menyenangkan.
